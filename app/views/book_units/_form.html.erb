@@ -1,0 +1,37 @@
+<%= form_with(model: book_unit, local: true) do |form| %>
+  <% if book_unit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(book_unit.errors.count, "error") %> prohibited this book_unit from being saved:</h2>
+
+      <ul>
+      <% book_unit.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :book_id %>
+    <%= form.text_field :book_id, id: :book_unit_book_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :available %>
+    <%= form.check_box :available, id: :book_unit_available %>
+  </div>
+
+  <div class="field">
+    <%= form.label :edition %>
+    <%= form.text_field :edition, id: :book_unit_edition %>
+  </div>
+
+  <div class="field">
+    <%= form.label :condition %>
+    <%= form.text_field :condition, id: :book_unit_condition %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
