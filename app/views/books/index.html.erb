@@ -8,7 +8,6 @@
       <th>Title</th>
       <th>Author</th>
       <th>Available Units</th>
-      <th>Sinopsys</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -19,7 +18,6 @@
         <td><%= book.title %></td>
         <td><%= book.author %></td>
         <td><%= book.book_units.where(available: true).count %></td>
-        <td><%= book.sinopsys %></td>
         <td><%= link_to 'Show', book %></td>
         <td><%= link_to 'Edit', edit_book_path(book) %></td>
         <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>

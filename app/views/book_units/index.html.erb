@@ -5,7 +5,8 @@
 <table>
   <thead>
     <tr>
-      <th>Book</th>
+      <th>Title</th>
+      <th>Author</th>
       <th>Available</th>
       <th>Edition</th>
       <th>Condition</th>
@@ -16,7 +17,8 @@
   <tbody>
     <% @book_units.each do |book_unit| %>
       <tr>
-        <td><%= book_unit.book %></td>
+        <td><%= book_unit.book.title %></td>
+        <td><%= book_unit.book.author %></td>
         <td><%= book_unit.available %></td>
         <td><%= book_unit.edition %></td>
         <td><%= book_unit.condition %></td>
@@ -27,7 +29,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Book Unit', new_book_unit_path %>

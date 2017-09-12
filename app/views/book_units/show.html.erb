@@ -1,9 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @book_unit.book.title %>
-</p>
+<h2>
+  <%= link_to @book_unit.book.title, @book_unit.book %>
+</h2>
 
 <p>
   <strong>Author:</strong>
@@ -11,7 +10,7 @@
 </p>
 
 <p>
-  <strong>Synopsis:</strong>
+  <strong>Sinopsys:</strong>
   <%= @book_unit.book.sinopsys %>
 </p>
 

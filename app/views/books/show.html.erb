@@ -1,9 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
+<h2>
   <%= @book.title %>
-</p>
+</h2>
 
 <p>
   <strong>Author:</strong>
@@ -18,12 +17,11 @@
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>
 
-<h3>Book Units</h3>
+<h3>Available Book Units</h3>
 
 <table>
   <thead>
     <tr>
-      <th>Available</th>
       <th>Edition</th>
       <th>Condition</th>
       <th>Year</th>
@@ -32,9 +30,8 @@
   </thead>
 
   <tbody>
-    <% @book.book_units.each do |book_unit| %>
+    <% @book.book_units.where(available: true).each do |book_unit| %>
       <tr>
-        <td><%= book_unit.available %></td>
         <td><%= book_unit.edition %></td>
         <td><%= book_unit.condition %></td>
         <td><%= book_unit.year %></td>
