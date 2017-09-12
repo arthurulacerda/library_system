@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170911145703) do
+ActiveRecord::Schema.define(version: 20170912154726) do
 
   create_table "book_units", force: :cascade do |t|
     t.integer "book_id"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20170911145703) do
     t.string "condition"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "year"
     t.index ["book_id"], name: "index_book_units_on_book_id"
   end
 
