@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @rent.user %>
+</p>
+
+<p>
+  <strong>Book:</strong>
+  <%= @rent.book %>
+</p>
+
+<p>
+  <strong>Days to deadline:</strong>
+  <%= @rent.days_to_deadline %>
+</p>
+
+<p>
+  <strong>Bill day delay:</strong>
+  <%= @rent.bill_day_delay %>
+</p>
+
+<%= link_to 'Edit', edit_rent_path(@rent) %> |
+<%= link_to 'Back', rents_path %>
