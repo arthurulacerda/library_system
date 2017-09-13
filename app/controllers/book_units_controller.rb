@@ -14,7 +14,7 @@ class BookUnitsController < ApplicationController
 
   # GET /book_units/new
   def new
-    @book_unit = BookUnit.new
+    @book_unit = BookUnit.new(book_id: params[:book_id])
   end
 
   # GET /book_units/1/edit
@@ -69,6 +69,6 @@ class BookUnitsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def book_unit_params
-      params.require(:book_unit).permit(:book_id, :available, :edition, :condition)
+      params.require(:book_unit).permit(:book_id, :available, :edition, :condition, :year)
     end
 end

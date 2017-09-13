@@ -11,6 +11,8 @@
     </div>
   <% end %>
 
+  <%= form.hidden_field :book_id %>
+
   <div class="field">
     <%= form.label :available %>
     <%= form.check_box :available, id: :book_unit_available %>
@@ -19,6 +21,11 @@
   <div class="field">
     <%= form.label :edition %>
     <%= form.text_field :edition, id: :book_unit_edition %>
+  </div>
+
+  <div class="field">
+    <%= form.label :year %>
+    <%= form.text_field :year, id: :book_unit_year %>
   </div>
 
   <div class="field">
